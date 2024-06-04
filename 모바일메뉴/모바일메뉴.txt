@@ -1,0 +1,124 @@
+<!-- 모바일 메뉴 -->
+    <div id="ham"><!-- 모바일 버튼 -->
+      <a href="#"><i class="xi-bars xi-3x"></i></a>
+    </div>
+    
+    <div class="mobile_lnb">
+     <img src="/images/logo.jpg" class="img1">
+     <i class="xi-hamburger-out xi-3x img2"></i>
+     <ul class="navi">
+      <li class="group">
+        <div class="title"><a href="/index1">홈</a></div>
+      </li>
+      <li class="group">
+        <div class="title">춘천연탄은행</div>
+        <ul class="submenu">
+          <li><a href="/greeting">인사말</a></li>
+          <li><a href="#">비전과 가치</a></li>
+          <li><a href="#">연혁</a></li>
+          <li><a href="#">함께하는 사람들</a></li>
+          <li><a href="/map">오시는 길</a></li>
+        </ul>
+      </li><!-- group1 end -->
+  
+      <li class="group">
+        <div class="title">사업소개</div>
+        <ul class="submenu">
+         <li><a href="#">나눔은행</a></li>
+         <li><a href="#">축제은행</a></li>
+         <li><a href="#">파랑새학교</a></li>
+         <li><a href="#">소근소근 마을관리소</a></li>
+        </ul>
+      </li><!-- group1 end -->
+  
+      <li class="group">
+        <div class="title">후원안내</div>
+        <ul class="submenu">
+         <li><a href="#">후원안내</a></li>
+         <li><a href="#">일시후원</a></li>
+         <li><a href="/sponsor">정기후원</a></li>
+         <li><a href="#">자동이체 CMS</a></li>
+         <li><a href="#">기부영수증신청</a></li>
+         <li><a href="#">후원현황</a></li>
+        </ul>
+      </li><!-- group1 end -->
+  
+      <li class="group">
+       <div class="title">자원봉사</div>
+       <ul class="submenu">
+         <li><a href="#">봉사안내 및 신청</a></li>
+         <li><a href="#">봉사일정</a></li>
+         <li><a href="#">봉사확인서 신청</a></li>
+         <li><a href="/review">봉사후기</a></li>
+       </ul>
+      </li><!-- group1 end -->
+  
+      <li class="group">
+       <div class="title">나눔이야기</div>
+       <ul class="submenu">
+        <li><a href="/notice">소식지</a></li>
+        <li><a href="/board1">언론보도</a></li>
+        <li><a href="/gallery">나눔갤러리</a></li>
+        <li><a href="/movie">나눔동영상</a></li>
+        <li><a href="#">사랑나눔글</a></li>
+       </ul>
+      </li><!-- group1 end -->
+     </ul><!-- navi end -->
+    </div><!-- mobile_lnb end -->
+
+/* 모바일메뉴 */
+#ham{position:fixed;top:40px; right:10px; z-index:999; border:1px solid #d1d1d1; border-radius:4px; transition:all 0.3s;box-shadow:2px 2px 2px rgba(0,0,0,0.4); }
+#ham a { color:#999; transition:all 0.3s}
+#ham a:hover { color:#333}
+#ham:hover { border-color:#333}
+
+.mobile_lnb{ display:none; position: fixed;right:0;top:0; width:100%; height:100%;background:rgba(0,0,0,0.7); z-index:9999;  box-shadow:0px 3px 3px #999;}
+.mobile_lnb { padding:0; box-sizing:border-box}
+.mobile_lnb > ul.navi {  width:100%; text-indent:10px; padding:65px 0px 30px; background:#fff;border-bottom:1px solid #d1d1d1;}
+.mobile_lnb > ul > li { border-bottom:1px solid #d1d1d1;}
+.mobile_lnb > ul > li > a { display:block; color:#666; font-weight:400; font-size:12px;transform:translate(0,0); transition:all 0.3s}
+.mobile_lnb > ul > li > a:hover { color:#F60; transform:translate(5px,0);}
+
+.mobile_lnb > .img1{ position: absolute;left:5px;top:5px; cursor: pointer;width:40%;}
+.mobile_lnb > .img2{ position: absolute;right:5px;top:10px; cursor: pointer; width:7%; border:1px solid #666; padding:1px; border-radius:2px; color:#666}
+
+/* 아코디언메뉴(서브메뉴) */
+li.group { margin-bottom:0px;background:#fff;}
+div.title { height:35px; line-height:35px; cursor:pointer; font-weight:600; padding:3px 0}
+div.title a {color:#333;}
+ul.submenu li { height:30px; margin-bottom:0px; line-height:30px; background:#f4f4f4; cursor:pointer;}
+ul.submenu li a { display:block; width:100%; height:100%; color:#333; text-decoration:none; font-size:13px; text-align: left;}
+ul.submenu li a:hover { background:#f4f4f4; color:#000}
+
+/* 서브 */
+.left_nav { display: none;}
+.sub_section { width: 100% !important; padding: 0 15px; box-sizing: border-box;}   
+.r_section { width: 100% !important; float: none;}
+.greeting_top { background-size: 50% !important;}
+.greeting_top > p { color:#fff !important; font-weight: 700 !important; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);}
+
+
+
+//모바일 메뉴
+$(document).ready(function() {
+    // 아코디언메뉴 제이쿼리
+    $(".submenu").hide();
+    $("div.title").click(function(){
+        if($(this).next().css("display")=="none"){
+         $(".submenu").slideUp("fast");
+        } 
+         $(this).next().slideDown("fast");
+    
+ 
+    })
+    //햄버거메뉴 (모바일메뉴)
+        $("#ham").click(function(){
+             $(".mobile_lnb").show("slide",{direction:"right"},300,null);
+             });
+             $(".mobile_lnb > i.img2").click(function(){
+                  $(".mobile_lnb").hide("slide",{direction:"right"},300,null);
+       });
+    });//모바일메뉴 end
+
+
+

@@ -1,0 +1,18 @@
+<div class="box_text">
+      <div style="overflow: hidden;">
+        <p class="rolling_text">"연탄밥상마을 공동체는 사랑의 '레가토'(이음공동체)입니다. 희망을 이어주고 사랑을 이어주고, 행복을 이어주는 이음공동체입니다. 연탄밥상마을공동체 가족 여러분! 진심으로 감사합니다. 사랑합니다. 축복합니다."</p>
+      </div>
+    </div><!-- box_text -->
+
+.box_text { overflow: hidden; position: absolute; bottom: -35px; left: 50%;margin-left: -490px; width: 1000px; padding: 23px 42px; box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.25); font-size: 24px; line-height: 1.4;
+ box-sizing: border-box; font-size: 24px; border-radius: 5px; background-color: #fff; z-index: 100;}
+    
+.rolling_text{width: 2200px; white-space: nowrap; animation: slide-left 22s linear infinite; color: #929292;}
+@keyframes slide-left {
+    from {
+                  transform: translateX(20%);
+        }
+    to {
+                  transform: translateX(-105%);
+        }
+}

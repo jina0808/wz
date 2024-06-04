@@ -1,0 +1,63 @@
+body { background: #f4f3f2;}
+.bg_w { background: #fff;}
+.m { margin: 0 auto;}
+.mt { margin-top: 30px;}
+.m30 {margin: 30px 0; }
+
+/* sub_section */
+.sub_section { width: 1000px; margin:30px auto; display: flex; justify-content: space-between;}
+
+.left_nav { width: 190px; height: 100%; display: flex; flex-direction: column; align-items: center; flex-wrap: wrap; padding-bottom: 50px; }
+ul.l_menu { width: 85%; margin: 20px 0 30px;}
+ul.l_menu li { border-bottom: 1px solid #d1d1d1; }
+ul.l_menu li a { font: 600 1em "Nanum Gothic"; color:#666; display: flex; justify-content: space-between; padding: 15px 0;}
+ul.l_menu li a:hover { color:#a8353a}
+ul.l_menu li a span { width: 14px; height: 14px; display: block; text-indent: -9999px; background: url(../sub/images/arrow.png) 0 0 no-repeat; }
+ul.l_menu li a:hover span { background-position: -14px 0;}
+
+ul.l_banner li a { padding: 10px 0; border-bottom: 1px solid #d1d1d1; }
+ul.l_banner li:last-child a { border: 0;}
+ul.l_banner li img { display: block; transition: all 0.3s;} 
+ul.l_banner li a:hover img { box-shadow: 3px 3px 3px #0004;/* rgba(0,0,0,0.4) */}
+
+.sub_article { width: 780px; padding: 20px 20px 60px 20px; box-sizing: border-box;}
+
+/* 춘천연탄은행(인사말) */
+.greeting_top { background: url(../sub/images/greeting_top.jpg) 100% 100% no-repeat; border-bottom: 1px solid #d1d1d1;}
+
+ul.home { display: flex; align-items: center;}
+ul.home li { margin: 0 3px; font-size: 0.8em; color:#666;}
+ul.home li:first-child { width: 21px; height: 21px; background: #c3c3c3; color:#fff; border-radius: 50%; display: flex; justify-content: center; align-items: center;}
+ul.home li:nth-child(2n) { color:#d1d1d1; font-size: 0.5em;}
+ul.home li:last-child { font-weight: 700; color:#000}
+
+.g_title { margin: 30px 0; font: 700 2.5rem "Nanum Gothic"; color:#444}
+
+.g_title1 { font: 700 1.5rem "Nanum Gothic"; color: #a8353a; margin: 30px 0;}
+.g_text { font: 0.8rem "돋움"; line-height: 1.6; text-align: justify; color: #666;}
+.g_title2 { font: 700 1.2rem "Nanum Gothic"; color: #a8353a; margin: 30px 0 10px !important;}
+
+ul.name { display: flex; flex-direction: column; justify-content: space-between;  border-left: 4px solid #a8353a; padding-left: 10px; margin: 40px 0 60px; color:#666; font-size: 0.8em;}
+ul.name li:last-child { font-size: 1.2rem; margin-top: 5px;}
+
+/* 춘천연탄은행(오시는길) */
+.map { margin-top: 20px;}
+.map_add dl { font: 0.9rem "돋움"; color:#666; line-height: 2; }
+.map_add dl dd { float: left; padding-left: 10px; background: url(../sub/images/dot.png) left center no-repeat;}
+.map_add dl dt { padding-left: 120px;}
+.map_add dl:nth-of-type(2) dt { padding-left: 160px;}
+
+/* 사업소개(나눔은행) */
+.bank_top { background: url(../sub/images/bank_top.jpg) 100% 100% no-repeat;}
+.bank_title { font: 700 1.7em "Nanum Gothic"; color:#666; margin-top: 30px;}
+.bank_thumb { display: flex; justify-content: space-between;}
+.bank_thumb li img { border: 1px solid #c1c1c1; box-shadow: 0 0 4px #0004;}
+
+/* 후원안내(일시후원) */
+.sponsor_top { background: url(../sub/images/sponsor_top.jpg) 100% 100% no-repeat;}
+
+/* 자원봉사(봉사후기) */
+.review_top { background: url(../sub/images/review_top.jpg) 100% 100% no-repeat;}
+
+/* 나눔이야기(소식지) */
+.notice_top { background: url(../sub/images/notice_top.jpg) 100% 100% no-repeat;}
